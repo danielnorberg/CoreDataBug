@@ -1,18 +1,18 @@
 // 
-//  Bar.m
+//  Post.m
 //  CoreDataBug
 //
 //  Created by Daniel Norberg on 2011-01-19.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Bar.h"
+#import "Post.h"
 
-#import "Foo.h"
+#import "Blog.h"
 
-@implementation Bar 
+@implementation Post 
 
-@dynamic baz;
-@dynamic foo;
+@dynamic content;
+@dynamic blog;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  Bar.h
+//  Post.h
 //  CoreDataBug
 //
 //  Created by Daniel Norberg on 2011-01-19.
@@ -8,14 +8,14 @@
 
 #import <CoreData/CoreData.h>
 
-@class Foo;
+@class Blog;
 
-@interface Bar :  NSManagedObject  
+@interface Post :  NSManagedObject  
 {
 }
 
-@property (nonatomic, retain) NSString * baz;
-@property (nonatomic, retain) Foo * foo;
+@property (nonatomic, retain) NSString * content;
+@property (nonatomic, retain) Blog * blog;
 
 @end
 

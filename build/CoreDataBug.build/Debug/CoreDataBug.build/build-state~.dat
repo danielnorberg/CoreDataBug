@@ -1,279 +1,0 @@
-TCoreDataBug
-v7
-r0
-t317164955.297980
-cCheck dependencies
-cProcessInfoPlistFile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Info.plist CoreDataBug-Info.plist
-cCopyStringsFile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-cCompileXIB /Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib
-cProcessPCH /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch.gch CoreDataBug_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cDataModelCompile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/CoreDataBug_DataModel.mom /Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel
-cCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/main.o /Users/daniel/Projects/CoreDataBug/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug_AppDelegate.o /Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Foo.o /Users/daniel/Projects/CoreDataBug/Foo.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Bar.o /Users/daniel/Projects/CoreDataBug/Bar.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004D35759E00000000000000EE
-t1295349150
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
-c000000004B73FBEF000000000000043A
-t1265892335
-s1082
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/daniel/Projects/CoreDataBug/Bar.h
-c000000004D3754EE0000000000000142
-t1295471854
-s322
-i<CoreData/CoreData.h>
-
-N/Users/daniel/Projects/CoreDataBug/Bar.m
-c000000004D3754EE00000000000000E8
-t1295471854
-s232
-i"Bar.h"
-i"Foo.h"
-
-N/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.h
-c000000004D3754450000000000000311
-t1295471685
-s785
-i<Cocoa/Cocoa.h>
-
-N/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m
-c000000004D3756170000000000002212
-t1295472151
-s8722
-i"CoreDataBug_AppDelegate.h"
-
-N/Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel
-c000000004D3754F20000000000000088
-t1295471858
-s136
-
-N/Users/daniel/Projects/CoreDataBug/CoreDataBug_Prefix.pch
-c000000004D3754450000000000000099
-t1295471685
-s153
-i<Cocoa/Cocoa.h>
-
-N/Users/daniel/Projects/CoreDataBug/English.lproj/InfoPlist.strings
-c000000004D375445000000000000005A
-t1295471685
-s90
-
-N/Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib
-c000000004D37544500000000000202E8
-t1295471685
-s131816
-
-N/Users/daniel/Projects/CoreDataBug/Foo.h
-c000000004D3754EE0000000000000114
-t1295471854
-s276
-i<CoreData/CoreData.h>
-
-N/Users/daniel/Projects/CoreDataBug/Foo.m
-c000000004D3754EE00000000000000CA
-t1295471854
-s202
-i"Foo.h"
-
-N/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Bar.o
-t1295472155
-s5756
-
-N/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug.LinkFileList
-c000000004D37561800000000000001D1
-t1295472152
-s465
-
-N/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug_AppDelegate.o
-t2
-s0
-
-N/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Foo.o
-t1295472155
-s5636
-
-N/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/main.o
-t1295472155
-s4984
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app
-t2
-s0
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Info.plist
-t1295472152
-s898
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/MacOS/CoreDataBug
-t2
-s0
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/PkgInfo
-t1295472152
-s8
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/CoreDataBug_DataModel.mom
-t1295472154
-s1760
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1295472152
-s90
-
-N/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/MainMenu.nib
-t1295472152
-s29922
-
-N/Users/daniel/Projects/CoreDataBug/main.m
-c000000004D3754450000000000000106
-t1295471685
-s262
-i<Cocoa/Cocoa.h>
-
-N/var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch.gch
-t1295472154
-s54306576
-
-NCoreDataBug-Info.plist
-c000000004D37544500000000000003F3
-t1295471685
-s1011
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies317164952#317164952#0(0"0(0#1#0"32651522506817640#0"0#
-
-CCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Bar.o /Users/daniel/Projects/CoreDataBug/Bar.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317164955.136571
-e317164955.270397
-r1
-xCompileC
-xbuild/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Bar.o
-x/Users/daniel/Projects/CoreDataBug/Bar.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Users/daniel/Projects/CoreDataBug/Bar.m317164955#317164955#0(0"0(0#0#40"/Users/daniel/Projects/CoreDataBug/Bar.m8646729472#1096"    cd /Users/daniel/Projects/CoreDataBug    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/CoreDataBug.hmap -F/Users/daniel/Projects/CoreDataBug/build/Debug -I/Users/daniel/Projects/CoreDataBug/build/Debug/include -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources/x86_64 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources -include /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch -c /Users/daniel/Projects/CoreDataBug/Bar.m -o /Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Bar.o0#
-
-CCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug_AppDelegate.o /Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317164954.974240
-e317164955.109456
-r0
-xCompileC
-xbuild/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug_AppDelegate.o
-x/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m: In function '-[CoreDataBug_AppDelegate applicationDidFinishLaunching:]':
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: 'Foo' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: (Each undeclared identifier is reported only once
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: for each function it appears in.)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: 'foo' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:22: error: 'Bar' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:22: error: 'bar' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:23: error: 'mov' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:27: error: 'error' undeclared (first use in this function)
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:34: error: redefinition of 'moc'
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:18: error: previous definition of 'moc' was here
-o/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:34: error: request for member 'persistentStoreController' in something not a structure or union
-lSLF07#2@68"Compile /Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164954#317164955#0(1434"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m: In function '-[CoreDataBug_AppDelegate applicationDidFinishLaunching:]':/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: 'Foo' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: (Each undeclared identifier is reported only once/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: for each function it appears in.)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:19: error: 'foo' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:22: error: 'Bar' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:22: error: 'bar' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:23: error: 'mov' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:27: error: 'error' undeclared (first use in this function)/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:34: error: redefinition of 'moc'/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:18: error: previous definition of 'moc' was here/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m:34: error: request for member 'persistentStoreController' in something not a structure or union9(4@45"'Foo' undeclared (first use in this function)317164955#135#118#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#19#0#19#0#43"'*' undeclared (first use in this function)0(4@45"'foo' undeclared (first use in this function)317164955#481#118#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#19#0#19#0#43"'*' undeclared (first use in this function)0(4@45"'Bar' undeclared (first use in this function)317164955#599#118#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#22#0#22#0#43"'*' undeclared (first use in this function)0(4@45"'bar' undeclared (first use in this function)317164955#717#118#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#22#0#22#0#43"'*' undeclared (first use in this function)0(4@45"'mov' undeclared (first use in this function)317164955#835#118#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#23#0#23#0#43"'*' undeclared (first use in this function)0(4@47"'error' undeclared (first use in this function)317164955#953#120#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#27#0#27#0#43"'*' undeclared (first use in this function)0(4@21"Redefinition of 'moc'317164955#1073#94#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#34#0#34#0#19"redefinition of '*'0(13@37"Previous definition of 'moc' was here317164955#1167#110#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#18#0#18#0#35"previous definition of '*' was here0(4@84"Request for member 'persistentStoreController' in something not a structure or union317164955#1277#157#0(6@60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m317164951#34#0#34#0#0"0(0#0#60"/Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m8634908928#1136"    cd /Users/daniel/Projects/CoreDataBug    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/CoreDataBug.hmap -F/Users/daniel/Projects/CoreDataBug/build/Debug -I/Users/daniel/Projects/CoreDataBug/build/Debug/include -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources/x86_64 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources -include /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch -c /Users/daniel/Projects/CoreDataBug/CoreDataBug_AppDelegate.m -o /Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/CoreDataBug_AppDelegate.o1#
-
-CCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Foo.o /Users/daniel/Projects/CoreDataBug/Foo.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317164955.109540
-e317164955.297898
-r1
-xCompileC
-xbuild/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Foo.o
-x/Users/daniel/Projects/CoreDataBug/Foo.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Users/daniel/Projects/CoreDataBug/Foo.m317164955#317164955#0(0"0(0#0#40"/Users/daniel/Projects/CoreDataBug/Foo.m8625997344#1096"    cd /Users/daniel/Projects/CoreDataBug    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/CoreDataBug.hmap -F/Users/daniel/Projects/CoreDataBug/build/Debug -I/Users/daniel/Projects/CoreDataBug/build/Debug/include -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources/x86_64 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources -include /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch -c /Users/daniel/Projects/CoreDataBug/Foo.m -o /Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/Foo.o0#
-
-CCompileC build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/main.o /Users/daniel/Projects/CoreDataBug/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317164954.934727
-e317164955.136478
-r1
-xCompileC
-xbuild/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/main.o
-x/Users/daniel/Projects/CoreDataBug/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/daniel/Projects/CoreDataBug/main.m317164954#317164955#0(0"0(0#0#41"/Users/daniel/Projects/CoreDataBug/main.m8645568608#1098"    cd /Users/daniel/Projects/CoreDataBug    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/CoreDataBug.hmap -F/Users/daniel/Projects/CoreDataBug/build/Debug -I/Users/daniel/Projects/CoreDataBug/build/Debug/include -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources/x86_64 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources -include /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch -c /Users/daniel/Projects/CoreDataBug/main.m -o /Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/Objects-normal/x86_64/main.o0#
-
-CCompileXIB /Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib
-s317164952.206356
-e317164952.478459
-r1
-xCompileXIB
-x/Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib317164952#317164952#0(0"0(0#0#61"/Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib8644428288#356"    cd /Users/daniel/Projects/CoreDataBug    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/MainMenu.nib /Users/daniel/Projects/CoreDataBug/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
-
-CCopyStringsFile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s317164952.204137
-e317164952.268762
-r1
-xCopyStringsFile
-x/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings317164952#317164952#0(0"0(0#0#66"/Users/daniel/Projects/CoreDataBug/English.lproj/InfoPlist.strings8644918304#362"    cd /Users/daniel/Projects/CoreDataBug    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/English.lproj0#
-
-CDataModelCompile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/CoreDataBug_DataModel.mom /Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel
-s317164954.933975
-e317164954.974141
-r1
-xDataModelCompile
-x/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/CoreDataBug_DataModel.mom
-x/Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel
-lSLF07#2@76"Compile /Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel317164954#317164954#0(0"0(0#0#68"/Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel8627306336#276"    cd /Users/daniel/Projects/CoreDataBug    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/daniel/Projects/CoreDataBug/CoreDataBug_DataModel.xcdatamodel /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Resources/CoreDataBug_DataModel.mom0#
-
-CLd /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/MacOS/CoreDataBug normal x86_64
-r0
-
-CProcessInfoPlistFile /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Info.plist CoreDataBug-Info.plist
-s317164952.198265
-e317164952.204022
-r1
-xProcessInfoPlistFile
-x/Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Info.plist
-xCoreDataBug-Info.plist
-lSLF07#2@30"Process CoreDataBug-Info.plist317164952#317164952#0(0"0(0#0#57"/Users/daniel/Projects/CoreDataBug/CoreDataBug-Info.plist27303570963497028#310"    cd /Users/daniel/Projects/CoreDataBug    builtin-infoPlistUtility CoreDataBug-Info.plist -genpkginfo /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app/Contents/Info.plist0#
-
-CProcessPCH /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch.gch CoreDataBug_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317164952.478567
-e317164954.933754
-r1
-xProcessPCH
-x/var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch.gch
-xCoreDataBug_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@33"Precompile CoreDataBug_Prefix.pch317164952#317164954#0(0"0(0#0#57"/Users/daniel/Projects/CoreDataBug/CoreDataBug_Prefix.pch8449423003376444416#1004"    cd /Users/daniel/Projects/CoreDataBug    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/CoreDataBug.hmap -F/Users/daniel/Projects/CoreDataBug/build/Debug -I/Users/daniel/Projects/CoreDataBug/build/Debug/include -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources/x86_64 -I/Users/daniel/Projects/CoreDataBug/build/CoreDataBug.build/Debug/CoreDataBug.build/DerivedSources -c /Users/daniel/Projects/CoreDataBug/CoreDataBug_Prefix.pch -o /var/folders/v5/v53QBuEeE1aYWH9T4XZMfk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataBug_Prefix-aggglebjjsthwidulukurhzbppzj/CoreDataBug_Prefix.pch.gch0#
-
-CTouch /Users/daniel/Projects/CoreDataBug/build/Debug/CoreDataBug.app
-r0
-

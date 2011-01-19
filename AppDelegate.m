@@ -6,12 +6,12 @@
 //  Copyright __MyCompanyName__ 2011 . All rights reserved.
 //
 
-#import "CoreDataBug_AppDelegate.h"
+#import "AppDelegate.h"
 
-#import "Foo.h"
-#import "Bar.h"
+#import "Blog.h"
+#import "Post.h"
 
-@implementation CoreDataBug_AppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 
@@ -21,36 +21,47 @@
 	NSError *error = nil;
 	
 	NSManagedObjectContext *moc = [self managedObjectContext];
-	Foo *foo = [NSEntityDescription insertNewObjectForEntityForName:@"Foo" 
+	Blog *blog = [NSEntityDescription insertNewObjectForEntityForName:@"Blog" 
 											 inManagedObjectContext:moc];
 
-	Bar *bar = [NSEntityDescription insertNewObjectForEntityForName:@"Bar" 
+	Post *post = [NSEntityDescription insertNewObjectForEntityForName:@"Post" 
 											 inManagedObjectContext:moc];
 		
-	[foo addBarsObject:bar];
-	bar.baz = @"baz";
+	[blog addPostsObject:post];
+	post.content = @"content";
 	
 	// Removing this save makes the issue go away
 	if (![moc save:&error])
 		[NSException raise:@"SaveFailedException" format:@"Failed to save: %@", error];
 	
-	// Setting bar.baz to nil should make the query below _not_ return the foo created above
-	// as there is only one Foo instance and only one Bar instance. 
-	bar.baz = nil;
+	// Setting post.content to nil should make the query below _not_ return the blog created above
+	// as there is only one Blog instance and only one Post instance. 
+	post.content = nil;
 	
-	// This query should return all Foo instances where bar.baz != nil
-	// I.e., it should return an empty array.
-	NSFetchRequest *req = [[[NSFetchRequest alloc] init] autorelease];	
-	NSPredicate *pred = [NSPredicate predicateWithFormat:@"ANY bars.baz != nil"];
+	NSFetchRequest *req;
+	NSPredicate *pred;
+	
+	// First make sure that there's no Post instance with any content
+	req = [[[NSFetchRequest alloc] init] autorelease];	
+	pred = [NSPredicate predicateWithFormat:@"content != NULL"];
 	[req setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
-	[req setEntity:[NSEntityDescription entityForName:@"Foo" inManagedObjectContext:moc]];
+	[req setEntity:[NSEntityDescription entityForName:@"Post" inManagedObjectContext:moc]];
 	[req setPredicate:pred];
+	NSArray *posts = [moc executeFetchRequest:req error:&error];	
+	NSAssert(posts.count == 0, nil);
 	
-	NSArray *foos = [moc executeFetchRequest:req error:&error];	
+	// The following query should return all Blog instances where post.content != nil
+	// I.e., it should return an empty array.
+	req = [[[NSFetchRequest alloc] init] autorelease];	
+	pred = [NSPredicate predicateWithFormat:@"ANY posts.content != NULL"];
+	[req setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
+	[req setEntity:[NSEntityDescription entityForName:@"Blog" inManagedObjectContext:moc]];
+	[req setPredicate:pred];
+	NSArray *blogs = [moc executeFetchRequest:req error:&error];	
 	
-	// foos should be empty!
-	NSAssert([foos indexOfObject:foo] == NSNotFound, @"foo encountered!");
-	NSAssert(foos.count == 0, @"query does not return empty array!");	
+	// blogs should be empty!
+	NSAssert([blogs indexOfObject:blog] == NSNotFound, @"blog encountered!");
+	NSAssert(blogs.count == 0, @"query does not return empty array!");	
 }
 
 

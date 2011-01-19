@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CoreDataBug_AppDelegate : NSObject 
+@interface AppDelegate : NSObject 
 {
     NSWindow *window;
     
