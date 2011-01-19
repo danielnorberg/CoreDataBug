@@ -10,7 +10,7 @@
 
 @class Post;
 
-@interface Blog :  NSManagedObject  
+@interface Blog :  NSManagedObject
 {
 }
 

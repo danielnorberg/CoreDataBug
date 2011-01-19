@@ -1,5 +1,5 @@
 //
-//  CoreDataBug_AppDelegate.m
+//  AppDelegate.m
 //  CoreDataBug
 //
 //  Created by Daniel Norberg on 2011-01-19.
@@ -19,49 +19,49 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
 	NSError *error = nil;
-	
+
 	NSManagedObjectContext *moc = [self managedObjectContext];
-	Blog *blog = [NSEntityDescription insertNewObjectForEntityForName:@"Blog" 
+
+	// Blog <->> Post
+	// Post has one property named content of type NSString
+
+	Blog *blog = [NSEntityDescription insertNewObjectForEntityForName:@"Blog"
 											 inManagedObjectContext:moc];
 
-	Post *post = [NSEntityDescription insertNewObjectForEntityForName:@"Post" 
+	Post *post = [NSEntityDescription insertNewObjectForEntityForName:@"Post"
 											 inManagedObjectContext:moc];
-		
-	[blog addPostsObject:post];
+
 	post.content = @"content";
-	
+	[blog addPostsObject:post];
+
 	// Removing this save makes the issue go away
 	if (![moc save:&error])
-		[NSException raise:@"SaveFailedException" format:@"Failed to save: %@", error];
-	
-	// Setting post.content to nil should make the query below _not_ return the blog created above
-	// as there is only one Blog instance and only one Post instance. 
+		NSAssert(NO, ([NSString stringWithFormat:@"Failed to save: %@", error]));
+
+	// Setting post.content to nil should make the Blog fetch request below return an empty array
 	post.content = nil;
-	
-	NSFetchRequest *req;
-	NSPredicate *pred;
-	
+
 	// First make sure that there's no Post instance with any content
-	req = [[[NSFetchRequest alloc] init] autorelease];	
-	pred = [NSPredicate predicateWithFormat:@"content != NULL"];
-	[req setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
-	[req setEntity:[NSEntityDescription entityForName:@"Post" inManagedObjectContext:moc]];
-	[req setPredicate:pred];
-	NSArray *posts = [moc executeFetchRequest:req error:&error];	
+	NSFetchRequest *req1 = [[[NSFetchRequest alloc] init] autorelease];
+	NSPredicate *pred1 = [NSPredicate predicateWithFormat:@"content != NULL"];
+	[req1 setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
+	[req1 setEntity:[NSEntityDescription entityForName:@"Post" inManagedObjectContext:moc]];
+	[req1 setPredicate:pred1];
+	NSArray *posts = [moc executeFetchRequest:req1 error:&error];
 	NSAssert(posts.count == 0, nil);
-	
-	// The following query should return all Blog instances where post.content != nil
-	// I.e., it should return an empty array.
-	req = [[[NSFetchRequest alloc] init] autorelease];	
-	pred = [NSPredicate predicateWithFormat:@"ANY posts.content != NULL"];
-	[req setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
-	[req setEntity:[NSEntityDescription entityForName:@"Blog" inManagedObjectContext:moc]];
-	[req setPredicate:pred];
-	NSArray *blogs = [moc executeFetchRequest:req error:&error];	
-	
+
+	// The following fetch should return all Blog instances where post.content != nil
+	// There are none, so it should return an empty array.
+	NSFetchRequest *req2 = [[[NSFetchRequest alloc] init] autorelease];
+	NSPredicate *pred2 = [NSPredicate predicateWithFormat:@"ANY posts.content != NULL"];
+	[req2 setIncludesPendingChanges:YES]; // Just to be sure. The docs say that default = YES
+	[req2 setEntity:[NSEntityDescription entityForName:@"Blog" inManagedObjectContext:moc]];
+	[req2 setPredicate:pred2];
+	NSArray *blogs = [moc executeFetchRequest:req2 error:&error];
+
 	// blogs should be empty!
 	NSAssert([blogs indexOfObject:blog] == NSNotFound, @"blog encountered!");
-	NSAssert(blogs.count == 0, @"query does not return empty array!");	
+	NSAssert(blogs.count == 0, @"fetch request does not return empty array!");
 }
 
 
@@ -81,23 +81,23 @@
 
 
 /**
-    Creates, retains, and returns the managed object model for the application 
+    Creates, retains, and returns the managed object model for the application
     by merging all of the models found in the application bundle.
  */
- 
+
 - (NSManagedObjectModel *)managedObjectModel {
 
     if (managedObjectModel) return managedObjectModel;
-	
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+
+    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];
     return managedObjectModel;
 }
 
 
 /**
-    Returns the persistent store coordinator for the application.  This 
-    implementation will create and return a coordinator, having added the 
-    store for the application to it.  (The directory for the store is created, 
+    Returns the persistent store coordinator for the application.  This
+    implementation will create and return a coordinator, having added the
+    store for the application to it.  (The directory for the store is created,
     if necessary.)
  */
 
@@ -115,14 +115,14 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *applicationSupportDirectory = [self applicationSupportDirectory];
     NSError *error = nil;
-	
+
     if ( [fileManager fileExistsAtPath:applicationSupportDirectory isDirectory:NULL] ) {
 		if (![fileManager removeItemAtPath:applicationSupportDirectory error:&error]) {
 			NSAssert(NO, ([NSString stringWithFormat:@"Failed to clean out app support directory: %@", error]));
 			return nil;
 		}
     }
-    
+
     if ( ![fileManager fileExistsAtPath:applicationSupportDirectory isDirectory:NULL] ) {
 		if (![fileManager createDirectoryAtPath:applicationSupportDirectory withIntermediateDirectories:NO attributes:nil error:&error]) {
             NSAssert(NO, ([NSString stringWithFormat:@"Failed to create App Support directory %@ : %@", applicationSupportDirectory,error]));
@@ -130,27 +130,27 @@
             return nil;
 		}
     }
-    
+
     NSURL *url = [NSURL fileURLWithPath: [applicationSupportDirectory stringByAppendingPathComponent: @"storedata"]];
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: mom];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType 
-                                                configuration:nil 
-                                                URL:url 
-                                                options:nil 
+    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                configuration:nil
+                                                URL:url
+                                                options:nil
                                                 error:&error]){
         [[NSApplication sharedApplication] presentError:error];
         [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
         return nil;
-    }    
+    }
 
     return persistentStoreCoordinator;
 }
 
 /**
     Returns the managed object context for the application (which is already
-    bound to the persistent store coordinator for the application.) 
+    bound to the persistent store coordinator for the application.)
  */
- 
+
 - (NSManagedObjectContext *) managedObjectContext {
 
     if (managedObjectContext) return managedObjectContext;
@@ -174,7 +174,7 @@
     Returns the NSUndoManager for the application.  In this case, the manager
     returned is that of the managed object context for the application.
  */
- 
+
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window {
     return [[self managedObjectContext] undoManager];
 }
@@ -185,11 +185,11 @@
     message to the application's managed object context.  Any encountered errors
     are presented to the user.
  */
- 
+
 - (IBAction) saveAction:(id)sender {
 
     NSError *error = nil;
-    
+
     if (![[self managedObjectContext] commitEditing]) {
         NSLog(@"%@:%s unable to commit editing before saving", [self class], _cmd);
     }
@@ -205,7 +205,7 @@
     handle the saving of changes in the application managed object context
     before the application terminates.
  */
- 
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
 
     if (!managedObjectContext) return NSTerminateNow;
@@ -219,16 +219,16 @@
 
     NSError *error = nil;
     if (![managedObjectContext save:&error]) {
-    
-        // This error handling simply presents error information in a panel with an 
-        // "Ok" button, which does not include any attempt at error recovery (meaning, 
-        // attempting to fix the error.)  As a result, this implementation will 
-        // present the information to the user and then follow up with a panel asking 
+
+        // This error handling simply presents error information in a panel with an
+        // "Ok" button, which does not include any attempt at error recovery (meaning,
+        // attempting to fix the error.)  As a result, this implementation will
+        // present the information to the user and then follow up with a panel asking
         // if the user wishes to "Quit Anyway", without saving the changes.
 
-        // Typically, this process should be altered to include application-specific 
-        // recovery steps.  
-                
+        // Typically, this process should be altered to include application-specific
+        // recovery steps.
+
         BOOL result = [sender presentError:error];
         if (result) return NSTerminateCancel;
 
@@ -245,7 +245,7 @@
         NSInteger answer = [alert runModal];
         [alert release];
         alert = nil;
-        
+
         if (answer == NSAlertAlternateReturn) return NSTerminateCancel;
 
     }
@@ -257,14 +257,14 @@
 /**
     Implementation of dealloc, to release the retained variables.
  */
- 
+
 - (void)dealloc {
 
     [window release];
     [managedObjectContext release];
     [persistentStoreCoordinator release];
     [managedObjectModel release];
-	
+
     [super dealloc];
 }
 

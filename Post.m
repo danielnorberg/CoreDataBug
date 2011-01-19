@@ -1,4 +1,4 @@
-// 
+//
 //  Post.m
 //  CoreDataBug
 //
@@ -10,7 +10,7 @@
 
 #import "Blog.h"
 
-@implementation Post 
+@implementation Post
 
 @dynamic content;
 @dynamic blog;

@@ -1,5 +1,5 @@
 //
-//  CoreDataBug_AppDelegate.h
+//  AppDelegate.h
 //  CoreDataBug
 //
 //  Created by Daniel Norberg on 2011-01-19.
@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject 
+@interface AppDelegate : NSObject
 {
     NSWindow *window;
-    
+
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
