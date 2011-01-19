@@ -1,0 +1,7 @@
+Core Data behaves strangely when doing fetch requests using predicates with array operators against objects with pending (unsaved) changes.
+
+This project attempts to reproduce this strange behavior.
+
+The interesting code is in applicationDidFinishLaunching: in AppDelegate.m
+
+Note: The data store is recreated on every launch of the application.
